@@ -3,7 +3,7 @@ import InputButton from './InputNumberBtn';
 import './Calculator.css';
 import calculate from '../logic/calculate';
 
-const number = ['AC', '\u00B1', '%', '÷', 7, 8, 9, 'x', 4, 5, 6, '-', 1, 2, 3, '+', 0, '.', '='];
+const number = ['AC', '+/-', '%', '÷', 7, 8, 9, 'x', 4, 5, 6, '-', 1, 2, 3, '+', 0, '.', '='];
 
 function Calculator() {
   const [result, setResult] = useState({ total: null, next: null, operation: null });
