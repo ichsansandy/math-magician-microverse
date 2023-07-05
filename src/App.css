@@ -1,8 +1,102 @@
+:root {
+  --primary-color:#a33846;
+  --secondary-color:#fff;
+  --accent-color:#90313e;
+  --background-color:#faf0f1;
+  --text-color:#040102;
+}
+
+.wrapper{
+  max-width: 1000px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7.5vh;
+  background-color: var(--background-color);
+}
+
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.link-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+}
+
+.link-wrapper a {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 11px 18px;
+  border-radius: 12px;
+}
+
+.link-wrapper a.active,
+.link-wrapper a:hover
+ {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+}
+
 .App {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   gap: 30px;
+}
+
+.calc-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  min-width: 300px;
+  text-align: center;
+}
+
+.resultScreen {
+  grid-column: span 4;
+  width: inherit;
+  text-align: right;
+  background-color: beige;
+  padding: 10px 20px;
+  border: 1px solid white;
+}
+
+.input-container {
+  padding: 8px 15px;
+  border: 1px solid white;
+  text-align: center;
+}
+
+.input-container:is(:hover, :focus) {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.grid-span-2 {
+  grid-column: span 2;
+}
+
+.red {
+  background-color: orange;
+}
+
+.gray {
+  background-color: antiquewhite;
+}
+
+.quotes-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  max-width: 40ch;
 }

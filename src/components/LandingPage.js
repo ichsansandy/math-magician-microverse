@@ -2,7 +2,7 @@ import React from 'react';
 
 function LandingPage() {
   return (
-    <div>
+    <div className="wrapper">
       <h1>Welcome to Math Magician</h1>
       <p>
         Welcome to our innovative calculator website, where crunching numbers has never been easier!

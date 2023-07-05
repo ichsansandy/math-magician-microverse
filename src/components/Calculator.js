@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import InputButton from './InputNumberBtn';
-import './Calculator.css';
 import calculate from '../logic/calculate';
 
 const number = ['AC', '+/-', '%', '÷', 7, 8, 9, 'x', 4, 5, 6, '-', 1, 2, 3, '+', 0, '.', '='];

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './Quotes.css';
 
 const url = 'https://api.api-ninjas.com/v1/quotes?category=humor';
 
@@ -30,7 +29,7 @@ function Quotes() {
   if (loading) return <h1>Loading ...</h1>;
   if (error) return <h1>404</h1>;
   return (
-    <div className="quotes-container">
+    <div className="wrapper quotes-container">
       <div>
         &quot;
         <span>{quote.quote}</span>
