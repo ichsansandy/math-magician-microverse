@@ -1,12 +1,12 @@
 :root {
-  --primary-color:#a33846;
-  --secondary-color:#fff;
-  --accent-color:#90313e;
-  --background-color:#faf0f1;
-  --text-color:#040102;
+  --primary-color: #a33846;
+  --secondary-color: #fff;
+  --accent-color: #90313e;
+  --background-color: #faf0f1;
+  --text-color: #040102;
 }
 
-.wrapper{
+.wrapper {
   max-width: 1000px;
 }
 
@@ -15,7 +15,9 @@
   justify-content: center;
   align-items: center;
   height: 7.5vh;
+  min-height: 70px;
   background-color: var(--background-color);
+  box-shadow: 0 5px 30px #bebebe;
 }
 
 .navbar-wrapper {
@@ -26,7 +28,8 @@
 
 .link-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
+  gap: 30px;
   align-items: center;
   width: 40%;
 }
@@ -36,13 +39,33 @@
   color: var(--text-color);
   padding: 11px 18px;
   border-radius: 12px;
+  position: relative;
+  z-index: 30;
 }
 
-.link-wrapper a.active,
-.link-wrapper a:hover
- {
-  background-color: var(--accent-color);
-  color: var(--secondary-color);
+.link-wrapper a::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  bottom: 10%;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  background-color: var(--secondary-color);
+  transition: all 0.3s ease;
+}
+
+.link-wrapper a:hover::before,
+.link-wrapper a.active::before {
+  height: 30%;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  bottom: 10%;
+  left: 0;
+  width: 100%;
+  background-color: var(--secondary-color);
+  transition: all 0.4s ease;
 }
 
 .App {
@@ -99,4 +122,5 @@
   text-align: center;
   gap: 10px;
   max-width: 40ch;
+  font-size: x-large;
 }
